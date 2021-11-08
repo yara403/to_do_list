@@ -9,10 +9,11 @@ part 'home_page_store.g.dart';
 class HomePageStore = _HomePageStore with _$HomePageStore;
 
 abstract class _HomePageStore with Store {
-  static final ToDoDataSourceInterface _toDoRemoteDS = ToDoLocalDataSource();
+  static final ToDoDataSourceInterface _toDoRemoteDS = ToDoRemoteDataSource();
 
   @observable
-  var toDoListStream = _toDoRemoteDS.fetchToDoListStream().asObservable();
+  ObservableStream<List<ToDoItem>?> toDoListStream =
+      _toDoRemoteDS.fetchToDoListStream().asObservable();
 
   Future<void> toogleItemState(ToDoItem oldItem) async {
     await _toDoRemoteDS.onToogleToDoItemState(oldItem.id, !oldItem.state);
@@ -37,4 +38,7 @@ abstract class _HomePageStore with Store {
   @computed
   int get undoneTaskListLength =>
       itemList.where((item) => item.state == false).length;
+
+  @computed
+  bool get isLoading => toDoListStream.value == null;
 }

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "751325675719",
+    "project_id": "to-do-list-c0a25",
+    "storage_bucket": "to-do-list-c0a25.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:751325675719:android:293d1985fbcfd359a93ee2",
+        "android_client_info": {
+          "package_name": "com.rocketseat.crud_firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "751325675719-d0cuqgr1711gmo8isl5qvjbnpl1ad8qt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rocketseat.crud_firebase",
+            "certificate_hash": "66a9b1900257ef34a4f2c35f5ba55cf0257f58d8"
+          }
+        },
+        {
+          "client_id": "751325675719-mh031964nfi70tg6c4ekauc3vnhd5emq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYJr8hs4NnOMJ7AE82-k5SOEXKhsCffHs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "751325675719-mh031964nfi70tg6c4ekauc3vnhd5emq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -23,6 +23,13 @@ mixin _$HomePageStore on _HomePageStore, Store {
           Computed<int>(() => super.undoneTaskListLength,
               name: '_HomePageStore.undoneTaskListLength'))
       .value;
+  Computed<bool>? _$isLoadingComputed;
+
+  @override
+  bool get isLoading =>
+      (_$isLoadingComputed ??= Computed<bool>(() => super.isLoading,
+              name: '_HomePageStore.isLoading'))
+          .value;
 
   final _$toDoListStreamAtom = Atom(name: '_HomePageStore.toDoListStream');
 
@@ -44,7 +51,8 @@ mixin _$HomePageStore on _HomePageStore, Store {
     return '''
 toDoListStream: ${toDoListStream},
 itemList: ${itemList},
-undoneTaskListLength: ${undoneTaskListLength}
+undoneTaskListLength: ${undoneTaskListLength},
+isLoading: ${isLoading}
     ''';
   }
 }
